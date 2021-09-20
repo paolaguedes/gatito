@@ -1,0 +1,121 @@
+* {
+    margin:0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+
+:root { 
+    --cor-principal:#ffc400;
+}
+
+body { 
+    background: linear-gradient(to top,rgb(185, 0, 130),rgb(253, 85, 183), rgb(226, 49, 188)); 
+    background-size: 300% 300%;
+    color: var(--cor-principal); 
+    text-align:center;
+    height: 100vh;
+}
+
+.box {
+    max-width: 90%;
+    width: 100%;
+    margin: 20px auto;
+}
+
+header {
+    overflow: hidden;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:10px;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--cor-principal);
+    z-index: 1;
+}
+nav .ancoras {
+    display: flex;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+nav .ancoras a {
+    padding-left: 2px;
+    text-decoration: none;
+    color: var(--cor-principal);  
+    border-left: 2px solid var(--cor-principal);
+}
+
+nav .ancoras a:hover {
+    color: rgb(255, 153, 0);  
+}
+
+.banner {
+    background-color: white;
+    max-height: 60vh;
+    height: 100%;
+}
+
+nav h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* @keyframes boucing {
+    to {
+        transform: translateY(30px);
+    }
+} */
+
+#circle {
+    position: absolute;
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 100px;
+    left: -150px;
+    z-index: 0;
+}
+
+#circle2 {
+    position: absolute;
+    background-color: rgb(255, 235, 192);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: -30px;
+    right: -150px;
+    z-index: 0;
+}
+
+@media (max-width: 500px) {
+    header nav h1 {
+        font-size: 25px;
+    }
+    header nav .ancoras a {
+        font-size: 12px;
+        text-align: start;
+    }
+}
+
+@media (max-width:900px) {
+    header nav {
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+
+    header nav .ancoras {
+       padding: 0;
+    }
+}

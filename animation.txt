@@ -1,0 +1,11 @@
+animation-name: qualquerum
+animation-duration: 1s
+animation-timing-function: linear
+animation-delay: 1s qnt tempo demora pra acontecer
+animation-iteration-count: infinite qnts vezes vai repetir
+animation-direction: alternate-reverse
+animation-fill-mode: backwards vai e volta
+animation-play-state: paused define qnd vai parar
+
+forma abreviada:
+animation: qualquerum 1s linear 1s infinite alternate backwards paused;
