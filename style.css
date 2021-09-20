@@ -6,6 +6,11 @@
 
 :root { 
     --cor-principal:#ffc400;
+    --cor-texto: rgb(128, 89, 44);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body { 
@@ -13,21 +18,25 @@ body {
     background-size: 300% 300%;
     color: var(--cor-principal); 
     text-align:center;
-    height: 100vh;
+    height: 100%;
 }
 
 .box {
     max-width: 90%;
     width: 100%;
-    margin: 20px auto;
+    margin: 20px auto 100px;
+    background-color: white;
 }
 
 header {
     overflow: hidden;
     position: relative;
+    height: 90vh;
+    border-bottom: 8px solid #ffe078;
 }
 
 header nav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -35,9 +44,15 @@ header nav {
     justify-content: space-between;
     background-color: white;
     padding: 5px 10px;
-    border-bottom: 1px solid var(--cor-principal);
+    border-bottom: 1px solid #ffe078;
     z-index: 1;
 }
+
+nav h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
 nav .ancoras {
     display: flex;
     gap: 10px;
@@ -59,16 +74,23 @@ nav .ancoras a:hover {
     background-color: white;
     max-height: 60vh;
     height: 100%;
+
 }
 
-nav h1 {
-    font-size: 2rem;
-    text-align: center;
+.banner p {
+    font-weight: 500;
+    color: var(--cor-texto);
+    padding-top: 30px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 header img {
     max-width: 400px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 /* @keyframes boucing {
@@ -79,13 +101,12 @@ header img {
 
 #circle {
     position: absolute;
-    background-color: pink;
+    background-color: rgb(255, 200, 210);
     width: 300px;
     height: 300px;
     border-radius: 50%;
     top: 100px;
     left: -150px;
-    z-index: 0;
 }
 
 #circle2 {
@@ -99,6 +120,33 @@ header img {
     z-index: 0;
 }
 
+main {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgb(255, 228, 233);
+    color: var(--cor-texto);
+}
+
+main .products {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+main h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+main div img {
+    max-width: 200px;
+    width: 100%;
+}
+/* responsive */
+
 @media (max-width: 500px) {
     header nav h1 {
         font-size: 25px;
@@ -106,6 +154,11 @@ header img {
     header nav .ancoras a {
         font-size: 12px;
         text-align: start;
+    }
+
+    #circle, #circle2 {
+        width: 250px;
+        height: 250px;
     }
 }
 
