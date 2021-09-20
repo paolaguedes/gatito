@@ -93,11 +93,25 @@ header img {
     z-index: 1;
 }
 
-/* @keyframes boucing {
-    to {
-        transform: translateY(30px);
+header #novelo {
+    left: 20px;
+    bottom: 50px;
+    position: absolute;
+    max-width: 96px;
+    width: 100%;
+    animation:rotate-center 5s linear alternate-reverse infinite;
+}
+
+header #novelo:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+@keyframes rotate-center{
+    to{
+        transform: translateX(calc(85vw - 96px)) rotate(720deg);
     }
-} */
+}
 
 #circle {
     position: absolute;
@@ -120,32 +134,170 @@ header img {
     z-index: 0;
 }
 
+/* main */
+
 main {
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 0;
     background-color: rgb(255, 228, 233);
     color: var(--cor-texto);
 }
 
+main section {
+    border-bottom: 8px solid #ffe078;
+    padding-bottom: 60px;
+}
+
+main section:last-of-type {
+    border-bottom: 0;
+    padding-bottom: 60px;
+}
+
 main .products {
-    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 main h2 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 50px;
 }
 
-main div img {
-    max-width: 200px;
+main .products div {
+    position: relative;
+    padding: 10px;
+}
+
+main .products div img {
+    position: relative;
+    top:15px;
+    max-width: 220px;
     width: 100%;
 }
+
+main .products div p {
+    padding: 10px 0 5px;
+    text-align: center;
+}
+
+main .products div p:last-of-type {
+    padding: 0 0 5px;
+}
+
+main .products div .heart {
+    position: absolute;
+    max-width: 20px;
+    width: 100%;
+    right: 0;
+    top:0;
+    cursor: pointer;
+}
+
+main .products div button {
+    background-color: #E70099;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+
+main .products div button:hover {
+    background-color: #dd0093;
+}
+
+main .curiosidades {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .curiosidades h2 {
+    margin: 0 auto 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+main .curiosidades .ballon-curiosidade {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .curiosidades .ballon-curiosidade img {
+    max-width: 150px;
+    width: 100%;
+}
+
+main .curiosidades .ballon-curiosidade h3 {
+    font-size: 25px;
+    padding-bottom: 30px;
+    text-align: start;
+}
+
+main .curiosidades .ballon-curiosidade ul li {
+    text-align: start;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+main .curiosidades #cat {
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .curiosidades #cat .eye {
+    max-width:100px;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--cor-texto);
+    position: relative;
+}
+
+main .curiosidades #cat .circle-curiosidade {
+    background-color: pink;
+    max-width: 200px;
+    width: 100%;
+    height: 200px;
+    border-radius: 100px 100px 500%;
+    transform: rotate(-135deg);
+    margin: 60px auto;
+}
+
+main .curiosidades .curiosidades-content .cat-button {
+    background-color: pink;
+    max-width: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 10px;
+    color: var(--cor-texto);
+    box-shadow: 1px 1px 3px rgb(117, 83, 32);
+    cursor: pointer;
+}
+
+main .curiosidades .curiosidades-content .cat-button:hover {
+    box-shadow: -1px -1px 3px rgb(117, 83, 32);
+}
+
 /* responsive */
+@media (max-width: 400px) {
+    main .products div img {
+        width: 200px;
+    }
+}
 
 @media (max-width: 500px) {
     header nav h1 {
@@ -170,5 +322,10 @@ main div img {
 
     header nav .ancoras {
        padding: 0;
+    }
+
+    main .curiosidades .ballon-curiosidade {
+        flex-wrap: wrap-reverse;
+        width: 80%;
     }
 }
