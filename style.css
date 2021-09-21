@@ -99,7 +99,7 @@ header #novelo {
     position: absolute;
     max-width: 96px;
     width: 100%;
-    /* animation:rotate-center 5s linear alternate-reverse infinite; */
+    animation:rotate-center 5s linear alternate-reverse infinite;
 }
 
 header #novelo:hover {
@@ -195,10 +195,6 @@ main .products div .heart {
     top:0;
     cursor: pointer;
     color:rgb(185, 0, 130);
-}
-/* classe para chamar o i */
-.heart-fill {
-    background-color:rgb(185, 157, 0);
 }
 
 main .products div button {
