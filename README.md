@@ -1,4 +1,4 @@
-# Gatito PetShop
+# 🐱 Gatito PetShop
 
 JavaScript
 - Para deixar o coração dos cards dos produtos com a interação de favoritar e desfavoritar foi usado a função toggle que serve para adicionar e remover uma classe de um elemento.
