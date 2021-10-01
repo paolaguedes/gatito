@@ -153,7 +153,6 @@ main section:last-of-type {
 
 main #produtos {
     background-color: rgb(255, 228, 233);
-
 }
 
 main .produtos {
@@ -234,6 +233,7 @@ main #quemsomos .equipe img {
     max-width: 212px;
     width: 100%;
     height: 248px;
+    border-radius: 3px;
 }
 
 main #quemsomos .historia {
@@ -276,40 +276,101 @@ main #quemsomos .historia p {
 }
 
 /* curiosidade */
-.curiosidades img { 
-    max-width: 500px;
+main .curiosidades {
+    margin: 0 auto;
+    padding: 0 30px;
+    background-image: url(./img/bg-cat.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: 300px;
+    position: relative;
+}
+
+main .curiosidades img { 
+    max-width: 350px;
     width: 100%;
 }
 
-.curiosidades .curiosidade-left {
+main .curiosidades #bg-pata{
+    width: 100%;
+    height: 400px;
+    background-image: url(./img/bg-pata.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position-y: 200px;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+main .curiosidades .curiosidade-left {
     display: block;
     text-align: start;
     position: relative;
-    max-width: 80%;
-    width: 100%;
 }
 
-.curiosidades .curiosidade-left p {
+main .curiosidades .curiosidade-left p {
     position: absolute;
     top: 40%;
     left: 35%;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
-.curiosidades .curiosidade-right {
+main .curiosidades .curiosidade-right {
     display: block;
     text-align: end;
     position: relative;
+    z-index: 1;
 }
 
-.curiosidades .curiosidade-right p {
+main .curiosidades .curiosidade-right p {
     position: absolute;
     top: 40%;
     right: 30%;
-    font-size: 25px;
+    font-size: 1.5rem;
+    z-index: 1;
 }
 
 /* responsive */
+@media (max-width: 800px) {
+    main .curiosidades {
+        background-size: 200px;
+    }
+
+    main .curiosidades #bg-pata{
+        background-image: none;
+    }
+
+    main .curiosidades .curiosidade-left, .curiosidade-right {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    main .curiosidades .curiosidade-right {
+        text-align: center;
+    }
+
+    main .curiosidades .curiosidade-left p {
+        position: static;
+    }
+    
+    main .curiosidades .curiosidade-right p {
+        position: static;
+    }
+}
+
+@media (max-width: 540px) {
+    main .curiosidades {
+        background-image: none;
+    }
+}
+
 @media (max-width: 400px) {
     main .produtos div img {
         width: 200px;
