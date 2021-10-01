@@ -1,14 +1,9 @@
-let coracoes = document.getElementsByClassName("far")
+function favoritarCoracao() {
+  let coracoes = document.getElementsByClassName("far")
 
-for(let i=0; i<coracoes.length;i++){
-  coracoes[i].onclick = function(event){
-     event.currentTarget.classList.toggle("fas");
-     //toggle mostra e esconde a classe
-     //quando clicado mostra a classe fas e qnd clica dnv esconde a classe fas
+  for(let i in coracoes){
+  coracoes[i].onclick = event => event.currentTarget.classList.toggle("fas")  
   }
 }
 
-
-function playAudio() {
-    document.getElementById("gatoAudio").play();
-}
+favoritarCoracao()
