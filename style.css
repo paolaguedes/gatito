@@ -138,8 +138,6 @@ header #novelo:hover {
 
 main {
     margin: 0 auto;
-    padding: 50px 0;
-    background-color: rgb(255, 228, 233);
     color: var(--cor-texto);
 }
 
@@ -153,8 +151,12 @@ main section:last-of-type {
     padding-bottom: 60px;
 }
 
-main .products {
-    margin: 0 auto;
+main #produtos {
+    background-color: rgb(255, 228, 233);
+
+}
+
+main .produtos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -164,30 +166,31 @@ main .products {
 main h2 {
     font-size: 40px;
     margin-bottom: 50px;
+    padding: 50px 0 0;
 }
 
-main .products div {
+main .produtos div {
     position: relative;
     padding: 10px;
 }
 
-main .products div img {
+main .produtos div img {
     position: relative;
     top:15px;
     max-width: 220px;
     width: 100%;
 }
 
-main .products div p {
+main .produtos div p {
     padding: 10px 0 5px;
     text-align: center;
 }
 
-main .products div p:last-of-type {
+main .produtos div p:last-of-type {
     padding: 0 0 5px;
 }
 
-main .products div .heart {
+main .produtos div .heart {
     position: absolute;
     max-width: 20px;
     width: 100%;
@@ -197,7 +200,7 @@ main .products div .heart {
     color:rgb(185, 0, 130);
 }
 
-main .products div button {
+main .produtos div button {
     background-color: #E70099;
     border: 0;
     padding: 5px 10px;
@@ -206,96 +209,109 @@ main .products div button {
     cursor: pointer;
 }
 
-main .products div button:hover {
+main .produtos div button:hover {
     background-color: #dd0093;
 }
 
-main .curiosidades {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
+main #quemsomos {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 90px;
 }
 
-main .curiosidades h2 {
-    margin: 0 auto 50px;
-    font-size: 40px;
-    text-align: center;
-}
-
-main .curiosidades .ballon-curiosidade {
+main #quemsomos .equipe {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    max-width: 100%;
     width: 90%;
-    margin: 0 auto;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
 }
 
-main .curiosidades .ballon-curiosidade img {
-    max-width: 150px;
+main #quemsomos .equipe img {
+    max-width: 212px;
     width: 100%;
+    height: 248px;
 }
 
-main .curiosidades .ballon-curiosidade h3 {
-    font-size: 25px;
-    padding-bottom: 30px;
-    text-align: start;
-}
-
-main .curiosidades .ballon-curiosidade ul li {
-    text-align: start;
-    font-size: 18px;
-    padding-bottom: 10px;
-}
-
-main .curiosidades #cat {
-    max-width: 50%;
-    margin: 0 auto;
+main #quemsomos .historia {
+    max-width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 0 auto;
 }
 
-main .curiosidades #cat .eye {
-    max-width:70px;
-    width: 100%;
-    height: 70px;
+main #quemsomos .historia p {
+    font-size: 22px;
+    text-align: justify;
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+
+#circle3 {
+    position: absolute;
+    background-color: rgb(255, 235, 192);
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    background-color: var(--cor-texto);
+    top: 100px;
+    left: -150px;
+}
+
+#circle4 {
+    position: absolute;
+    background-color: rgb(255, 200, 210);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: -250px;
+    z-index: 0;
+}
+
+/* curiosidade */
+.curiosidades img { 
+    max-width: 500px;
+    width: 100%;
+}
+
+.curiosidades .curiosidade-left {
+    display: block;
+    text-align: start;
+    position: relative;
+    max-width: 80%;
+    width: 100%;
+}
+
+.curiosidades .curiosidade-left p {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-size: 25px;
+}
+
+.curiosidades .curiosidade-right {
+    display: block;
+    text-align: end;
     position: relative;
 }
 
-main .curiosidades #cat .circle-curiosidade {
-    background-color: pink;
-    max-width: 100px;
-    width: 100%;
-    height: 100px;
-    border-radius: 100px 100px 500%;
-    transform: rotate(-135deg);
-    margin: 60px auto;
-}
-
-main .curiosidades .curiosidades-content .cat-button {
-    background-color: pink;
-    max-width: 50px;
-    width: 100%;
-    height: 50px;
-    border-radius: 50%;
-    border: 0;
-    font-size: 10px;
-    color: var(--cor-texto);
-    box-shadow: 1px 1px 3px rgb(117, 83, 32);
-    cursor: pointer;
-}
-
-main .curiosidades .curiosidades-content .cat-button:hover {
-    box-shadow: -1px -1px 3px rgb(117, 83, 32);
+.curiosidades .curiosidade-right p {
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    font-size: 25px;
 }
 
 /* responsive */
 @media (max-width: 400px) {
-    main .products div img {
+    main .produtos div img {
         width: 200px;
     }
 }
@@ -316,6 +332,16 @@ main .curiosidades .curiosidades-content .cat-button:hover {
 
     main .curiosidades #cat {
         max-width: 80%;
+    }
+}
+
+@media (max-width: 560px ) {
+    main #quemsomos .equipe img {
+        max-width: 250px;
+        width: 100%;
+        height: 248px;
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -346,4 +372,27 @@ main .curiosidades #cat .eye {
     max-width:40px;
     height: 40px;
 }
+}
+
+@media (max-width: 950px) {
+    main #quemsomos .equipe {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 25px;
+    }
+
+    main #quemsomos .historia p {
+        font-size: 16px;
+        width: 100%;
+        text-align: justify;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1180px) {
+    main #quemsomos .historia {
+        max-width: 100%;
+        justify-content: center;
+    }
 }
